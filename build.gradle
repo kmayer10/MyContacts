@@ -12,6 +12,18 @@ buildscript {
     }
 }
 
+plugins {
+  id "org.sonarqube" version "3.0"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "kmayer10_MyContacts"
+    property "sonar.organization", "kmayer10"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 allprojects {
     repositories {
         jcenter()
