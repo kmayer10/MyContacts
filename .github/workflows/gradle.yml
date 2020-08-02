@@ -28,7 +28,7 @@ jobs:
 #        SONAR_TOKEN: 0d491d5d3dbd7815309736e352213694ce70ed0d
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.3
-      with:
-        SONAR_TOKEN: 0d491d5d3dbd7815309736e352213694ce70ed0d  
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
       # Set the sonar.projectBaseDir analysis property
       #projectBaseDir: # optional, default is .
