@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+        SONAR_TOKEN: 0d491d5d3dbd7815309736e352213694ce70ed0d
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
