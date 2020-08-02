@@ -22,8 +22,8 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+    #- name: Build with Gradle
+     # run: ./gradlew build
     - name: SonarCloud Scan
       run: ./gradlew sonarqube 
       env:
@@ -31,3 +31,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Set the sonar.projectBaseDir analysis property
       # projectBaseDir: # optional, default is .
+    - name: Gradle Android
+      uses: Raul6469/android-gradle-action@2.0.0
+      with:
+      # The ./gradlew command arguments
+        script: build
+      # Your Android license agreement id
+      # android-licence: # optional
